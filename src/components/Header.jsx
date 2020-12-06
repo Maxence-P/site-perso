@@ -17,17 +17,20 @@ const Header = () => {
                     <p className="burger-line"></p>
                     <p className="burger-line"></p>
                 </div> :
-                <div className="cross" onClick={toggleMenu}>
-                    <p className="cross-line-1"></p>
-                    <p className="cross-line-2"></p>
-                </div>}
+                ""}
             {menuToggle ? 
                 <div className="menu-burger">
-                    <a className="menu-link">Mes Techs</a>
-                    <a className="menu-link">Mes Outils</a>
-                    <a className="menu-link">Mes Trucs</a>
-                    <a className="menu-link">LinkedIn</a>
-                    <a className="menu-link">GitHub</a>
+                    <div className="cross" onClick={toggleMenu}>
+                        <p className="cross-line-1"></p>
+                        <p className="cross-line-2"></p>
+                    </div>
+                    <div className="links">
+                        <a href="#techs" className="menu-link" onClick={toggleMenu}>Mes Techs</a>
+                        <a className="menu-link" onClick={toggleMenu}>Mes Outils</a>
+                        <a className="menu-link" onClick={toggleMenu}>Mes Trucs</a>
+                        <a className="menu-link" onClick={toggleMenu}>LinkedIn</a>
+                        <a className="menu-link" onClick={toggleMenu}>GitHub</a>
+                    </div>
                 </div> : 
             ""}
         </header>

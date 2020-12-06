@@ -9,6 +9,7 @@ body {
 }
 
 header {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -16,6 +17,7 @@ header {
     background-color: #202020;
     box-shadow: 0px 0px 5px 2px rgba(197, 0, 0, 1);
     padding: 20px 25px;
+    margin-bottom: 5%;
     min-height: 80px;
 }
 
@@ -24,7 +26,7 @@ header {
     font-weight: bold;
     text-shadow: 0px 0px 5px #000000;
     font-size: 25px;
-    color: #c50000;
+    color: #bb0000;
 }
 
 .burger-icon {
@@ -32,13 +34,15 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    z-index: 1;
 }
 
 .burger-line {
-    background-color: #c50000;
+    background-color: #bb0000;
     box-shadow: 0px 0px 5px #000000;
     width: 50px;
     height: 10px;
+    z-index: inherit;
 }
 
 .burger-line:nth-child(1) {
@@ -51,35 +55,42 @@ header {
 
 .menu-burger {
     position: fixed;
-    top: 80px;
+    top: 0;
     right: 0;
-    width: 50%;
+    width: 50vw;
     height: 100vh;
     background-color: #202020;
+    box-shadow: 0px 5px 5px 0px #000000;
+    opacity: 0.95;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
+    z-index: 0;
 }
 
 .cross-line-1 {
     position: relative;
     top: 12px;
-    background-color: #c50000;
+    background-color: #bb0000;
     box-shadow: 0px 0px 5px #000000;
     width: 55px;
     height: 12px;
     transform: rotate(45deg);
+    z-index: 1;
+    margin: 25px 0 0 115px;
 }
 
 .cross-line-2 {
     position: relative;
     top: 0;
-    background-color: #c50000;
+    background-color: #bb0000;
     box-shadow: 0px 0px 5px #000000;
     width: 55px;
     height: 12px;
     transform: rotate(135deg);
+    z-index: 1;
+    margin: 0 0 100px 115px;
 }
 
 .menu-link {
@@ -87,5 +98,17 @@ header {
     font-weight: bold;
     text-shadow: 0px 0px 5px #000000;
     font-size: 18px;
-    color: #c50000;
+    color: #bb0000;
+    text-decoration: none;
+}
+
+.links {
+    position: fixed;
+    top: 80px;
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
